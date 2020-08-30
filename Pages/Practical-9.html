@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Practical-9</title>
+    <style>
+        
+        *{
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+        }
+        #container{
+            margin: 0px auto;
+            padding: 10px;
+            
+        }
+        
+        .section:after{
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+        #content:after{
+            content: ' ';
+            display: block;
+            clear: both;
+        }
+        
+        #header{
+            width: 100%;
+            height: 70px;
+            padding: 0 20px;
+            background-color: grey;
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+        #header .navBar{
+            float: right;
+            list-style-type: none;
+        }   
+        .navBar li{
+            display: inline-block;
+            line-height: 70px;
+            
+            
+        }
+        .navBar li a {
+            color:white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            text-transform: uppercase;
+            padding:  0px 20px;
+            transition: .4s;
+         }
+        .navBar li a:hover, .show-btn:hover, .hide-btn:hover {
+            color: skyblue;
+            }
+        .show-btn, .hide-btn{
+            font-size: 30px;
+            color: white;
+            line-height:70px;
+            transition: .4s;
+            display: none;
+        }
+        .show-btn{
+            float: right;
+        }
+    
+        #chk
+        {
+        position: absolute;
+        visibility: hidden;
+        z-index: -10;
+        }
+
+       #banner{
+            margin-top: 100px;
+            height: 700px;
+            background-image: url(../img/Laptop.jpg);
+            background-size: 100vw 100vh;
+        } 
+        #banner h1{
+            color: white;
+            text-align: left;
+            text-transform: uppercase ;
+            padding: 15px;
+            font-size:60px;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        
+        div h1{
+            text-align: center;
+            margin-bottom: 30px;
+            
+        }
+        .section{
+            margin-bottom: 50px;
+            margin-top: 150px;
+            
+        }
+        
+        .circle{
+            height:225px;
+            width:225px;
+            border-radius: 50%;
+            float: left;
+            margin-left:7%;
+            margin-top: 10px;
+            
+            
+        }
+        #content{
+            width: 100%;
+        }
+        #leftside{
+            width:48%;
+            height:500px;
+            background-color: grey;
+            float: left; 
+            margin-top: 10px;
+            padding:20px;
+        }
+        #leftside h2{
+            text-align: left;
+            color:white;
+            
+        }
+        #leftside p{
+            font-size: 19px;
+            padding-top: 15px;
+            color: white;
+            text-align: justify;
+        }
+        #rightside{
+            width:48%;
+            height:500px;
+            float: right;
+            margin-top: 10px;
+        }
+        #rightside h2{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 10px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        #project1{
+            height: 158px;
+            background-image: url('../img/p1.jpg');
+            margin-bottom: 15px;
+        }
+        #project2{
+            height: 158px;
+            background-image: url('../img/p2.jpeg');
+            margin-bottom: 15px;
+        }
+        #project3{
+            height: 158px;
+            background-image: url('../img/p3.jpg');
+            
+        }
+        
+        .card{
+            height:330px;
+            width:235px;
+            background-color:rgb(202, 181, 181);
+            float: left;
+            margin-top: 15px;
+            margin-left:6%;
+        }
+        .card img{
+            height: 150px;
+            width:100%;
+            display:block;
+            margin: auto;
+            
+        }
+        .card h3{
+            padding: 10px;
+            text-align: center;
+        }
+        .card p{
+            padding-left: 10px;
+            padding-right: 10px;
+            text-align: justify;
+            color: white;
+            padding-bottom: 20px;
+        }
+        .card a{
+            text-align: center;
+            background-color: orangered;
+            border-radius: 9px;
+            display:block;
+            margin: auto;
+            padding: 8px; 
+            border:1px solid none;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        
+        }
+        .card a:hover{
+            background-color: blue;
+        }
+        #footer{
+            background-color: rgb(233, 141, 225);
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            padding: 20px;
+
+        }
+
+        @media (min-width: 871px) and (max-width: 1275px) {
+
+            /* circle */
+            .circle{
+            height:250px;
+            width:250px;
+            border-radius: 50%;
+            float: left;
+            margin-left:20%;
+            margin-top: 10px;
+
+            }
+            /* about us */
+            #content{
+                overflow: hidden;
+            
+            }
+            #leftside{
+            width:100%;
+            background-color: grey;
+            margin-top: 10px;
+            padding:20px;
+        }
+        #rightside{
+            width:100%;
+            margin-top: 10px;
+        }
+        #project1{
+            height: 170px;
+            background-image: url('../img/p1.jpg');
+            background-size: cover;
+            margin-bottom: 15px;
+        }
+        #project2{
+            height: 170px;
+            background-image: url('../img/p2.jpeg');
+            background-size: cover;
+            margin-bottom: 15px;
+        }
+        #project3{
+            height: 170px;
+            background-image: url('../img/p3.jpg');
+            background-size: cover;
+            
+        }
+
+            /* card */
+            .card{
+                height:320px;
+                width:250px;
+                background-color:rgb(202, 181, 181);
+                float: left;
+                margin-top: 15px;
+                margin-left:20%;
+                margin-bottom: 20px;
+                
+            }
+
+
+        }
+
+        @media (min-width: 681px) and (max-width: 870px) {
+              /* circle */
+              .circle{
+            height:250px;
+            width:250px;
+            border-radius: 50%;
+            float: left;
+            margin-left:12%;
+            margin-top: 10px;
+
+            }
+            /* about us */
+            #content{
+                overflow: hidden;
+            }
+            #leftside{
+            width:100%;
+            background-color: grey;
+            margin-top: 10px;
+            padding:20px;
+        }
+        #rightside{
+            width:100%;
+            margin-top: 10px;
+        }
+        #project1{
+            height: 170px;
+            background-image: url('../img/p1.jpg');
+            background-size: cover;
+            margin-bottom: 15px;
+        }
+        #project2{
+            height: 170px;
+            background-image: url('../img/p2.jpeg');
+            background-size: cover;
+            margin-bottom: 15px;
+        }
+        #project3{
+            height: 170px;
+            background-image: url('../img/p3.jpg');
+            background-size: cover;
+            
+        }
+
+            /* card */
+        .card{
+            height:320px;
+            width:250px;
+            background-color:rgb(202, 181, 181);
+            float: left;
+            margin-top: 15px;
+            margin-left:12%;
+            margin-bottom: 20px;
+                
+        }
+            /* navbar */
+       .show-btn,.hide-btn{
+          display: block;
+        }
+
+        .navBar{
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            text-align: center;
+            padding: 80px 0;
+            transition: .7s;
+            line-height: normal;
+
+        }
+        #chk:checked ~.navBar{
+            right: 0;
+        }
+        .navBar li{
+            display: block;
+            padding: 20px 0;
+        }
+        .navBar li a{
+            display: block;
+            
+        }
+        .hide-btn{
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+        }
+        @media (max-width: 680px){
+             /* circle */
+             .circle{
+            height:250px;
+            width:250px;
+            border-radius: 50%;
+            float: left;
+            margin-left:25%;
+            margin-top: 10px;
+
+            }
+            /* about us */
+            #content{
+                overflow: hidden;
+            }
+            #leftside{
+            width:100%;
+            background-color: grey;
+            margin-top: 10px;
+            padding:20px;
+        }
+        #rightside{
+            width:100%;
+            margin-top: 10px;
+        }
+        #project1{
+            height: 170px;
+            background-image: url('../img/p1.jpg');
+            background-size: cover;
+            margin-bottom: 15px;
+        }
+        #project2{
+            height: 170px;
+            background-image: url('../img/p2.jpeg');
+            background-size: cover;
+            margin-bottom: 15px;
+        }
+        #project3{
+            height: 170px;
+            background-image: url('../img/p3.jpg');
+            background-size: cover;
+            
+        }
+
+            /* card */
+        .card{
+            height:320px;
+            width:250px;
+            background-color:rgb(202, 181, 181);
+            float: left;
+            margin-top: 15px;
+            margin-left:25%;
+            margin-bottom: 20px;
+                
+        }
+            /* navbar */
+       .show-btn,.hide-btn{
+          display: block;
+        }
+
+        .navBar{
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            text-align: center;
+            padding: 80px 0;
+            transition: .7s;
+            line-height: normal;
+
+        }
+        #chk:checked ~.navBar{
+            right: 0;
+        }
+        .navBar li{
+            display: block;
+            padding: 20px 0;
+        }
+        .navBar li a{
+            display: block;
+            
+        }
+        .hide-btn{
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+            /* card and circle in one line */
+        }
+            
+    </style>
+</head>
+<body>
+    <div id="container">
+    <div id="header">
+        <input type="checkbox" id="chk">
+        <label for="chk" class="show-btn">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </label>
+        <ul class=navBar>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#about">ABOUT US</a></li>
+            <li><a href="#team">TEAM</a></li>
+            <li><a href="#technologies">TECHNOLOGIES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <label for="chk" class="hide-btn">
+                <i class="fa fa-times" aria-hidden="true"></i>
+              </label>
+        </ul>
+    </div>
+    <div id="banner">
+        <h1>Practical - 9</h1>
+        <!-- <img src="../img/Laptop.jpg" alt="bannerImage"> -->
+    </div>
+    
+    <div id="team"></div> 
+    <div class="section">   
+        <h1>Team Members</h1>
+            <img class="circle" src = "../img/1.png" alt = "image1">
+            <img class="circle" src = "../img/2.png" alt = "image2">
+            <img class="circle" src = "../img/3.png" alt = "image3">
+            <img class="circle" src = "../img/4.png" alt = "image4">
+    </div>
+      
+    
+    <div id="about"></div>
+    <div class="section">
+        <div id="content">
+            <h1>About Us</h1>
+        <div id="leftside">
+            <h2>About Projects</h2>
+            <p>In this project, We have used various properties of HTML and CSS like HTML lists, CSS position, margin, padding etc. This project is divided into three parts.</p>
+            <p>Firstly, Layout of the whole project is being made by dividing the page  with the help of Div tag. </p>
+            <p>Secondly ,Content is added. We have made horizontal navigation bar with the help of HTML list(Lists are used to group together related pieces of information so they are clearly associated with each other and easy to read.) and then fixed it with position property.The CSS position property is used to set position for an element. it is also used to place an element behind another and also useful for scripted animation effect. We have also made card layouts using to show the technology used.
+            </p>
+            <p>And in last, Page is made responsive so that users can view this page on any device. For making this page responsive we have used media queries.Media queries were built as an extension to media types commonly found when targeting and including styles. Media queries provide the ability to specify different styles for individual browser and device circumstances, the width of the viewport or device orientation for example. Being able to apply uniquely targeted styles opens up a world of opportunity and leverage to responsive web design. </p>
+        </div>
+        <div id="rightside">
+            <!-- <div class="article"> -->
+                <div id="project1">
+                    <h2>PROJECT - 1</h2>
+                </div>
+                <div id="project2">
+                    <h2>PROJECT - 2</h2>
+                </div>
+                <div id="project3">
+                    <h2>PROJECT - 3</h2>
+                </div>
+        </div>
+    </div>
+    
+    </div>
+    <div id ="technologies"></div>
+    <div class="section">
+        <h1>Technology Used</h1>
+        <div class="card">
+            <img src="../img/html.png" alt="html">
+            <h3>Introduction to HTML</h3>
+            <p>Hypertext refers to the way in which Web pages (HTML documents) are linked together. Thus, the link available on a webpage is .....</p>
+            <a href="HTML.html">Read More</a>
+        </div>
+        <div class="card">
+            <img src="../img/css.png" alt="css">
+            <h3>Introduction to CSS</h3>
+            <p>CSS is short for Cascading Style Sheets, and is the preferred way for setting the look and feel of a website. Cascading Style Sheets (CSS) is.....</p>
+            <a href="css.html">Read More</a>
+        </div>
+        <div class="card">
+            <img src="../img/javascript.jpg" alt="javascript">
+            <h3>Introduction to JavaScript</h3>
+            <p>JavaScript is a very powerful client-side scripting language. JavaScript is used mainly for enhancing the interaction of a user.....</p>
+            <a href="javascript.html">Read More</a>
+        </div>
+        <div class="card">
+            <img src="../img/bootstrap.png" alt="bootstrap">
+            <h3>Introduction to bootstrap</h3>
+            <p>Bootstrap is a free and open-source tool collection for creating responsive websites and web applications. It is the most popular.....</p>
+            <a href="bootstrap.html">Read More</a>
+        </div>
+    
+    </div>
+    <div id="contact"></div>
+    <div class="section" style="margin-bottom: 0px;">
+        <h1>Contact</h1>
+        <div id="footer">
+            <p>Website Template for Practical-8 &copy;<a href="https://www.beta-labs.in/" target="_blank">Beta-Labs</a></p> 
+            <br>
+            <a href="#top">Back To Top</a>
+    </div>
+    
+    </div>
+</div>
+</body>
+</html>
