@@ -3,42 +3,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Assignment-10</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/prac10style.css">
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 70px;
+    background-color: #2f3640;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+}
+
+.header h1 {
+    line-height: 70px;
+    color: white;
+}
+
+.header #opt {
+    display: none;
+}
+
+.content {
+    width: 100%;
+    margin-top: 90px;
+    float: right;
+    transition: .7s
+}
+
+.content img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: auto;
+}
+
+.content p {
+    text-align: justify;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    position: fixed;
+    top: 70px;
+    background-color: #353b48;
+    left: -100%;
+    transition: .6s;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 15px 25px;
+    transition: .4s;
+    cursor: pointer;
+}
+
+.sidebar ul li a span {
+    margin-left: 15px;
+}
+
+a i {
+    margin-right: 15px;
+}
+i{
+    cursor: pointer;
+}
+
+.sidebar ul li a:hover {
+    border-left: 10px solid white;
+}
+
+i {
+    font-size: 30px;
+    color: white;
+}
+
+.social {
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 30px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 15px 25px;
+}
+
+.social a {
+    transition: 0.4s;
+}
+
+.social a:hover {
+    font-size: 35px;
+}
+
+.show-btn,
+.hide-btn {
+    font-size: 35px;
+    color: white;
+    position: fixed;
+    top: 20px;
+    left: 50px;
+}
+
+#chk {
+    position: absolute;
+    visibility: hidden;
+    z-index: -10;
+}
+
+.hide-btn {
+    opacity: 0;
+}
+
+#chk:checked~.sidebar {
+    left: 0;
+}
+
+#chk:checked~.show-btn {
+    opacity: 0;
+}
+
+#chk:checked~.hide-btn {
+    opacity: 1;
+}
+
+#chk:checked~.content {
+    width: 80%;
+}
+
+@media (max-width:768px) {
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+    .social {
+        margin-top: 200px;
+    }
+    /* .header h1 {
+        display: none;
+    } */
+}
+
+
+/* @media(min-width:501px) and (max-width:768px) {
+    .social {
+        margin-top: 200px;
+    }
+} */
+
+@media(min-width:300px) and (max-width:450px) {
+    .header #opt {
+        display: block;
+    }
+    .header #main {
+        display: none;
+    }
+}
+    </style>
 </head>
 <body>
-    <div class="container">
-        <!-- open button -->
-        <input type="checkbox" id="chk">
-            <label for="chk" class="show-btn">
-                <i class="fa fa-bars"></i>
-            </label>
-            <!-- close button -->
-            <label for="chk" class="hide-btn">
-                <i class="fa fa-times"></i>
-            </label>
-        <header class="header">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgZaO_DyXwXsQCZQ8CjcVxD3f0u7qWXKh4Hw&usqp=CAU" alt="">
-            <h1 class="heading">fullstack</h1>
-        </header>
-        <div class="content">
-            <img src="../img/banner.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, deleniti non doloremque numquam quisquam explicabo accusantium praesentium expedita itaque id vitae quae nam ullam! Magnam aspernatur voluptatem, odit provident dolorum voluptatibus beatae dolore recusandae explicabo ex, incidunt veritatis quidem repellendus qui nam minima blanditiis porro, dignissimos maxime accusamus doloribus fugit a eum excepturi. Adipisci enim, mollitia iure aperiam consequuntur fuga delectus ratione dignissimos nostrum dicta veritatis unde dolores esse beatae optio porro impedit asperiores vitae. Doloribus aut delectus voluptatem repellendus corrupti cum velit nemo modi nesciunt quidem tempore soluta omnis fugit aliquid, recusandae earum officia id rerum itaque explicabo perferendis impedit! Necessitatibus, sunt. Facilis dolorum itaque architecto reprehenderit odit unde. A odio blanditiis, omnis recusandae fuga corrupti deserunt nemo praesentium temporibus? Facilis dolore corrupti sapiente sint illo nobis, aperiam magnam voluptatum eum quidem doloremque possimus maiores impedit quam ullam recusandae omnis consequatur repudiandae aspernatur nesciunt, tenetur amet ipsum? Quaerat nihil nisi officiis libero dolorem nam repellat ratione. Eveniet facere exercitationem obcaecati sapiente reprehenderit itaque ad, enim repellat id dicta temporibus accusantium eaque consequatur ipsam iusto, error quis eum minus incidunt sed. Dignissimos nisi ullam dicta beatae porro corporis voluptates architecto consequatur maxime unde mollitia esse earum vero fugiat dolorem vitae necessitatibus, eos aspernatur itaque molestias in. Vitae, molestiae aspernatur atque facere neque veniam voluptatem saepe eligendi voluptates facilis culpa quibusdam totam voluptate consectetur tenetur odio optio laudantium, omnis animi! Culpa, omnis illo necessitatibus vero minus harum ea veritatis accusantium asperiores assumenda molestias labore corporis, optio ullam ipsa animi inventore, incidunt fuga voluptatum. Quas soluta rem praesentium mollitia illum, veniam recusandae quos quis sit corrupti vero optio excepturi ullam amet sequi id odit cumque quisquam eum non hic aliquid perspiciatis laboriosam. Voluptate repudiandae fugit dolores, fugiat aliquid culpa ipsum vel, impedit exercitationem earum libero eum corporis a sapiente tempora veritatis ullam nulla quisquam beatae nihil. Quasi provident sequi ratione soluta porro consequuntur repellendus, natus ea laudantium laborum possimus, repudiandae placeat, delectus vero minima. Libero atque sint, minima soluta doloribus deserunt voluptatem temporibus tenetur a commodi vero harum expedita at nemo. Aliquid numquam cumque ex ut nesciunt beatae quae sapiente vel fugit aperiam magni repellat quisquam, optio libero assumenda porro quibusdam aspernatur neque facere ab mollitia? Laboriosam, cum porro amet doloribus deleniti, voluptas omnis nemo accusamus consectetur dolores aliquam fuga ratione! Sit odit, id qui molestias hic dolores eveniet quibusdam itaque, velit aspernatur, mollitia ipsa libero inventore ut nisi nesciunt excepturi. Rem, maiores! Debitis, quasi quos nam reprehenderit odio quis eos iusto, molestiae veritatis cumque quae delectus quod minima corporis eum voluptates ipsa, repellat quibusdam iure! Iure distinctio aut odit adipisci dolor earum error eligendi. Molestias at quos dolorum doloremque voluptas ex sit eveniet sequi eius? Soluta necessitatibus magnam reiciendis, corrupti odio amet similique voluptatibus repellat harum at praesentium ducimus ipsa. Eos quam quasi repellat nulla, sequi est obcaecati magnam assumenda magni provident maiores nihil? Perspiciatis praesentium rerum sint, odio fuga at, minus laborum eaque nulla magni aut optio autem eligendi maxime aperiam illum expedita repellat. Facere, veritatis. Ea ut qui numquam.
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus nihil quam suscipit a sapiente optio exercitationem qui sint recusandae omnis animi, esse, laborum ab ad eius tempore, rem sit expedita est quibusdam perferendis doloribus cupiditate. Minus, aperiam amet nostrum excepturi repellendus exercitationem ea animi earum numquam blanditiis accusantium? Id eius ipsum maiores, quia libero, ut praesentium quis, ab velit recusandae odit modi fuga saepe natus minus quidem! Quidem repellendus unde ipsam, similique distinctio quas. Aliquid obcaecati minima quisquam nostrum, vero sint. Sint, ab ratione. Facilis suscipit facere quasi. Deserunt quis nihil, ipsa nesciunt eaque voluptate. Et adipisci rerum consectetur voluptatem at! Rem, voluptatem ea sed fugit nemo fuga reprehenderit ipsa unde provident, quo nulla iure error modi consequuntur, maxime officia consectetur libero recusandae aut quae perspiciatis animi. Fugiat doloremque reprehenderit obcaecati enim blanditiis nulla saepe magnam magni nesciunt, aperiam non voluptatem earum mollitia molestias ratione, et iste, eveniet vero iusto id rem asperiores necessitatibus consequuntur aliquam! Velit, voluptas voluptates sequi possimus in earum quidem corporis, dolores delectus pariatur voluptatem? Autem magni voluptatem ducimus vero aliquam, sed possimus voluptatum, quis doloremque, nihil corrupti consequatur et quos odit? Reiciendis velit atque eius facilis blanditiis necessitatibus iusto labore nobis dolore sapiente provident dolorem harum fugit ratione error illo, obcaecati molestiae. Dolor animi beatae modi voluptate quae praesentium veritatis aspernatur, rerum accusamus? Maxime quidem adipisci quibusdam illo minima totam! Aut architecto quo minima officiis nulla maiores qui commodi aperiam, iure consectetur ut vitae eum blanditiis amet at odio! Quasi praesentium ullam corporis debitis, voluptatibus fugiat ab iste ut vel nihil reprehenderit excepturi placeat iure! Unde in alias nostrum consectetur temporibus magni adipisci dolorem illo provident? Blanditiis perspiciatis suscipit eum commodi sint vitae ipsum eius iusto adipisci dignissimos, ea debitis quo facere, voluptas consequuntur necessitatibus porro consectetur impedit voluptate quis minima. Libero at adipisci nihil minus eveniet, deserunt laudantium ipsum, optio veritatis doloribus ut necessitatibus eligendi minima itaque esse, ratione ab dolorum dolores accusamus ad. Nesciunt ut exercitationem quae laudantium. Mollitia, veritatis quaerat minima neque dolores saepe perspiciatis alias itaque necessitatibus sapiente ullam pariatur quia, dolorem, impedit dolore reiciendis! Aliquam maiores deleniti libero quos omnis beatae ab aut numquam veritatis dolores ipsam quo, magni totam illum accusamus similique laborum id quasi. Qui cumque cum nostrum recusandae ut sed unde minima, facere fugiat numquam officia nemo est, nihil aliquam, mollitia quas incidunt vitae. Doloremque quaerat vero at tenetur numquam consequatur vel voluptatem minus laudantium, quae ipsam aliquid, quisquam neque temporibus error tempore doloribus nemo accusantium sit architecto, nesciunt praesentium optio ipsa incidunt? Odit quas adipisci fugiat voluptatibus aliquid cum perferendis delectus! Illo itaque optio sunt? Cumque, minus dignissimos magni corporis eaque ducimus in dolores maxime, tempora totam eius soluta cum blanditiis sequi delectus repellendus asperiores. Commodi necessitatibus maiores iure, odit ratione cupiditate, eaque eligendi nemo rerum eveniet unde. Labore at rem vitae aspernatur nobis hic possimus numquam suscipit deserunt facilis dolorum eos commodi provident corrupti, exercitationem accusamus, harum impedit distinctio asperiores earum. Consequatur excepturi explicabo velit eaque odio veritatis atque laborum unde nisi! Hic, eaque suscipit.</p>
+    <div class="header">
+        <h1 id="main">PRACTICAL-10</h1>
+        <h1 id="opt">P-10</h1>
+    </div>
+    <input type="checkbox" id="chk">
+    <label for="chk" class="show-btn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <label for="chk" class="hide-btn">
+        <i class="fa fa-times"></i>
+    </label>
+    <div class="sidebar">
+        <ul>
+            <li><a href="#"><i class="fa fa-home"><span>Home</span></i></a></li>
+            <li><a href="#"><i class="fa fa-user"><span>About</span></i></a></li>
+            <li><a href="#"><i class="fa fa-tasks"><span>Services</span></i></a></li>
+            <li><a href="#"><i class="fa fa-rss"><span>Blog</span></i></a></li>
+            <li><a href="#"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
+        </ul>
+        <div class="social">
+            <a href=""><i class="fa fa-facebook-square"></i></a>
+            <a href=""><i class="fa fa-youtube-square"></i></a>
+            <a href=""><i class="fa fa-instagram"></i></a>
         </div>
-        <div class="sidebar">   
-            
-            <ul>
-                
-                <li><a href="#"><i class="fa fa-home"><span>home</span></i></a></li>
-                <li><a href="#"><i class="fa fa-user"><span>about</span></i></a></li>
-                <li><a href="#"><i class="fa fa-tasks"><span>services</span></i></a></li>
-                <li><a href="#"><i class="fa fa-rss"><span>Blog</span></i></a></li>
-                <li><a href="#"><i class="fa fa-id-card"><span>Contact</span></i></a></li>
+    </div>
+    <div class="content">
+        <img src="../image/ass8-banner.jpg" alt="">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius recusandae, voluptas perspiciatis doloribus laborum ad nihil sint iusto fugiat atque odio eveniet quam. Placeat laboriosam explicabo, earum dolor incidunt quos quam neque alias dignissimos
+            fugit cum aut quisquam distinctio. Sed architecto dignissimos dolores nesciunt voluptatibus voluptas debitis culpa libero eius repellat officia quae reiciendis quas vero, dolorem quos placeat quisquam quia numquam fuga maiores hic ullam tempore.
+            Odit sit ipsum culpa magnam corporis amet provident saepe ipsam error enim eos ullam quae nostrum, beatae in ab harum. Iure cupiditate inventore nostrum quam quis, rerum dignissimos, blanditiis id quidem, soluta provident qui ducimus? Maiores
+            ratione vero, ea, minus ab culpa voluptate mollitia tempora, doloremque unde cumque? Voluptate, ab. Tempora similique provident enim voluptas labore nostrum, odit omnis animi molestias fugit soluta veniam nam molestiae rem sapiente, iste ab
+            a perferendis! Dolore et temporibus qui enim ducimus aspernatur velit nemo, numquam laboriosam, at ex eos repellendus aut quasi ratione accusantium perferendis nisi deserunt architecto pariatur ut vel est ipsum. Nam ipsum nulla accusantium
+            aliquid laboriosam enim? Quisquam quo, sit labore in dolorum, neque quidem vitae natus iusto totam fuga minus tempore quae qui voluptatibus dolor itaque quaerat quos tempora voluptas ex odio quis asperiores magni? Dolore, sequi aspernatur
+            libero a impedit nisi dicta praesentium laudantium quibusdam vel aliquam harum consequatur magni ducimus atque culpa repellat est accusamus. Eum vitae similique facilis debitis. Est possimus odit temporibus nisi ullam ab consequuntur. Iste
+            nesciunt impedit non dolor architecto ipsa eveniet quis voluptate laborum. Eligendi repellat quo quasi vero alias quod ut velit sequi nisi est voluptas facilis, dolorem adipisci officiis, possimus corporis mollitia pariatur non atque doloremque,
+            veritatis a ipsum! Perferendis, repellat nesciunt facilis iste suscipit doloribus ex dolor debitis, tempore quas possimus praesentium fugit accusantium doloremque odio et assumenda? Vero vitae eius nam quos voluptatum, sit eos illo quaerat
+            facilis iusto mollitia soluta minus officiis quam eveniet ea nemo corrupti dicta voluptatibus. Libero perspiciatis quisquam odit unde dolorem, esse facilis nostrum optio, quaerat quod illum fugiat mollitia minus ipsum quibusdam et, soluta
+            voluptatem aliquid inventore. Accusantium similique voluptatem dolores, quis natus suscipit. Aliquam quasi dolore autem sint culpa impedit unde ducimus accusantium dolorem. Et quam maxime quaerat vel nam cum eligendi possimus cumque voluptate,
+            aperiam voluptatem itaque a enim eaque odio vitae? Voluptates saepe dignissimos aliquam necessitatibus laborum ex mollitia reprehenderit tempora. Amet non odio sit libero, voluptate pariatur repudiandae in eaque commodi. Assumenda numquam
+            nostrum soluta ab dolorum nobis sint inventore? Ullam quasi maiores dolor similique, nostrum ab est saepe, consequatur aliquam laudantium vero harum alias nesciunt aperiam sequi magnam fugit, inventore repudiandae! Maxime repellendus architecto
+            illo rerum odit asperiores est ab numquam, sapiente perferendis labore libero quasi dicta, tempora nemo eligendi, commodi optio aliquid veniam iste officia magnam. Aliquam voluptatum ea nam molestias dolore odit, aliquid earum ullam alias
+            autem accusantium ad, architecto velit itaque, illo cupiditate quis quos dolores asperiores vitae obcaecati hic. Explicabo voluptates quaerat, unde itaque sed amet debitis aspernatur, rem est voluptatem repellendus similique reiciendis error
+            provident?
+        </p>
 
-            </ul>
-        </div>
     </div>
 </body>
 </html>
