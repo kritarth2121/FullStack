@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Practical -14</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<Style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        
+    }
+    .main{
+        display: flex;
+       }
+  #heading h1{
+      color: #cc0000;
+      font-size: 60px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      text-transform: uppercase;
+      margin-top: 15px;
+      font-weight: bold;
+  }  
+  .sec1{
+      background-color: white;
+      border:  #cccccc;
+      width: 28%;
+      margin-left: 60px;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+      margin-top: 40px; 
+     
+      
+
+  }
+  .sec1_1{
+    background: linear-gradient(to right, #ffcc00 0%, #ff3300 100%);
+     
+     text-align: center;
+      color: white;
+      padding: 20px;
+  }
+  .sec1_1 i{
+      font-size: 25px;
+      padding: 10px;
+      margin-top: 10px;
+  }
+  .sec1_1 h2{
+      margin-top: 10px;
+  }
+ 
+  .form-control {
+  
+  height: 20px;
+  font-size: 16px;
+  padding-left: 0px;
+  margin-top: 40px;
+  border: none;
+  border-bottom: 1px solid black;
+  padding-right: 90px;
+  
+  
+}
+.sec1_2{
+    padding-left: 60px;
+    margin-top: 23px;
+    
+}
+.sec1_3{
+    padding-left: 60px;
+}
+.sec1_4{
+    text-align: right;
+    font-size: 15px;
+    padding-right: 60px;
+    margin-top: 8px;
+}
+#forgot{
+    color: gray;
+}
+.sec1_5{
+    margin-top: 30px;
+    padding-left: 30px;
+    display: inline-block;
+   
+
+}
+.button{
+    color: white;
+    background-color: #333333;
+    padding: 15px;
+    border-radius: 25px;
+    
+    width: 100px;
+    
+    justify-content: center;
+    
+}
+
+#account{
+    color: gray;
+    padding-top: 30px;
+    
+}
+.sec2{
+      background-color: white;
+      border:  #cccccc;
+      width: 28%;
+      margin-left: 60px;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+      margin-top: 40px; 
+     
+      }
+      .sec2_1{
+        text-align: center;
+      color: #990066;
+      padding: 18px;
+      }
+.sec2_1 h2{
+    margin-top: 10px ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+.sec2_2{
+    padding-left: 60px;
+    margin-top: 5px;
+    
+}
+.sec2_3{
+    padding-left: 60px;
+}
+.sec2_4{
+    padding-left: 60px;
+    margin-top: 10px ;
+}
+.sec2_5{
+    margin-top: 10px;
+    padding-left: 40px;
+    display: inline-block;
+   
+
+}
+.button2{
+    color: white;
+    background-color: #990066;
+    padding: 12px;
+    border-radius: 25px;
+    
+    width: 150px;
+    
+    justify-content: center;
+    
+}
+.sec2_6{
+    background-color: gray;
+    color: white;
+      padding: 18px;
+      margin-top: 18px;
+      text-align: center;
+  }
+  .sec2_6 i{
+      font-size: 20px;
+      padding: 10px;
+      margin-top: 10px;
+  }
+  .sec3{
+      background-color: white;
+      border:  #cccccc;
+      width: 28%;
+      margin-left: 60px;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+      margin-top: 40px; 
+     
+      }
+      .sec3_1{
+        text-align: center;
+      color: black;
+      padding: 18px;
+      }
+.sec3_1 h2{
+    margin-top: 10px ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+.sec3_2{
+    padding-left: 60px;
+    margin-top: 10px;
+    
+}
+
+.sec3_3{
+    padding-left: 60px;
+}
+
+
+.sec3_4{
+    text-align: right;
+    font-size: 12px;
+    padding-right: 40px;
+    margin-top: 8px;
+}
+#forgot3{
+    color: blue;
+}
+.sec3_5{
+    margin-top: 10px;
+    padding-left: 45px;
+    justify-content: center;
+    }
+    .button3{
+    color: white;
+    background: linear-gradient(to right, #0066FF , #000066);
+    padding: 12px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    width: 300px;
+    
+    justify-content: center;
+    
+}
+.sec3_6{
+    margin-top: 10px;
+    padding-left: 50px;
+    
+}
+.sec3_6 i{
+    color: blue;
+    
+}
+.btn{
+    background-color: white;
+    width: 75px;
+    border: none;
+    box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+    padding: 15px ;
+    border-radius: 25px;
+    margin: 10px;
+   
+    
+
+}
+
+
+@media (max-width: 968px){
+    .main{
+        display: flex;
+        flex-direction: column;
+        }
+        .sec1{
+      background-color: white;
+      border:  #cccccc;
+      width: 100%;
+      margin-left: 5px;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+      margin-top: 40px; 
+      
+     
+      }
+      .sec1_5{
+    margin-top: 30px;
+    padding-left: 20px;
+    display: inline-block;
+   
+
+}
+      .sec2{
+      background-color: white;
+      border:  #cccccc;
+      width: 100%;
+      margin-left: 5px;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+      margin-top: 40px; 
+    
+     
+      }
+      .sec3{
+      background-color: white;
+      border:  #cccccc;
+      width: 100%;
+      margin-left: 5px;
+      box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
+      margin-top: 40px; 
+   
+     
+      }
+}
+      
+
+</Style>
+<body bgcolor="#cccccc">
+    <section id="heading">
+    <h1>Form Templates</h1>
+    </section>
+    <div class="main">
+    <div class="sec1">
+        <section class="sec1_1">
+            <h2>Log In</h2>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-google-plus"></i>
+        </section>
+        <form  method="post" >
+                
+        
+        <section class="sec1_2">
+          <label >
+              <input type="email" name="email" placeholder="Your Email" class="form-control">
+          </label>  
+        </section>
+        <section class="sec1_3">
+            <label >
+                <input type="password" name="password" placeholder="Your password" class="form-control">
+            </label>
+        </section>
+        <section class="sec1_4">
+            <label >
+            <span id="forgot"> Forgot </span>Password?
+             </label>
+        </section>
+        <section class="sec1_5">
+            <input type="submit" value="LogIN" class="button">
+            <label style="padding-left: 30px;margin-top: 10px; font-size: 15px;"><span id="account"> Don't have a account? </span>sign up</label>
+        </section>
+       
+                
+        </form>
+    </div>
+    <div class="sec2">
+        <section class="sec2_1">
+            <h2 >Sign Up</h2>
+        </section>
+        <form  method="post" >
+        <section class="sec2_2">
+            <label >
+                <input type="email" name="email" placeholder="Your Email" class="form-control">
+            </label>  
+          </section>
+          <section class="sec2_3">
+              <label >
+                  <input type="password" name="password" placeholder="Your password" class="form-control">
+              </label>
+          </section>
+          <section class="sec2_4">
+            <input type="checkbox" name="genre" value="techno" />
+            <label style="padding-left: 20px; font-size: 15px;"><span style="color: gray;"> Accept the </span> <span style="color: blue;">  Terms And Conditions</span></label>
+          </section>
+          <section class="sec2_5">
+            <input type="submit" value="SignUp" class="button2">
+            <label style="padding-left: 30px;margin-top: 30px; font-size: 12px;"><span id="account">  Have an account? </span><span style="color: blue;"> Login</span></label>
+        </section>
+          </form>
+          <section class="sec2_6">
+            
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-google-plus"></i>
+        </section>
+    </div>
+    <div class="sec3">
+        <section class="sec3_1">
+            <h2 >Sign In</h2>
+        </section>
+        <form  method="post" >
+        <section class="sec3_2">
+            <label >
+                <input type="email" name="email" placeholder="Your Email" class="form-control">
+            </label>  
+          </section>
+          <section class="sec3_3">
+              <label >
+                  <input type="password" name="password" placeholder="Your password" class="form-control">
+              </label>
+          </section>
+          <section class="sec3_4">
+            <label >
+            <span id="forgot3"> Forgot Password?</span>
+             </label>
+        </section>
+        <section class="sec3_5">
+            <input type="submit" value="Sign in" class="button3">
+            <h2 style="text-align: center; margin-top: 15px; font-size: 13px; color: gray;">or Sign in with :</h2>
+            
+        </section>
+        </form>
+        <section class="sec3_6">
+            <button class="btn"><i class="fa fa-facebook"></i></button>
+            <button class="btn"><i class="fa fa-twitter"></i></button>
+            <button class="btn"><i class="fa fa-google-plus"></i></button>
+        </section>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
