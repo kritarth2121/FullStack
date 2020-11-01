@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<style> {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: grey;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    margin-top: 10px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    outline: none;
+    font-size: 20px;
+    margin: 0 40px;
+}
+
+#counter {
+    font-size: 30px;
+    color: yellow;
+    font-weight: bold;
+}<style>
+<script>
+var countervalue = parseInt(document.getElementById("counter").innerHTML)
+        var btn1 = document.getElementById("dec");
+        btn1.disabled = true;
+
+        function dec() {
+            countervalue = countervalue - 1;
+            document.getElementById("counter").innerHTML = countervalue
+            if (countervalue == 0) {
+                btn1.disabled = true;
+            }
+        }
+
+        function inc() {
+            countervalue = countervalue + 1;
+            document.getElementById("counter").innerHTML = countervalue
+            btn1.disabled = false
+        }
+        </script>
+        
+        
+        <!DOCTYPE html>
+
+<body>
+    <h1>COUNTER</h1>
+    <div id="container">
+        <button id="dec" onclick="dec()">-</button>
+        <div id="counter">0</div>
+        <button id="inc" onclick="inc()">+</button>
+    </div>
+</body>
+</html>
