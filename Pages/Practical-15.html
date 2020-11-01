@@ -45,7 +45,20 @@ button {
     color: yellow;
     font-weight: bold;
 }</style>
-<script>
+
+        
+        
+        
+
+<body>
+    <h1>COUNTER</h1>
+    <div id="container">
+        <button id="dec" onclick="dec()">-</button>
+        <div id="counter">0</div>
+        <button id="inc" onclick="inc()">+</button>
+    </div>
+</body>
+    <script>
 var countervalue = parseInt(document.getElementById("counter").innerHTML)
         var btn1 = document.getElementById("dec");
         btn1.disabled = true;
@@ -64,16 +77,4 @@ var countervalue = parseInt(document.getElementById("counter").innerHTML)
             btn1.disabled = false
         }
         </script>
-        
-        
-        
-
-<body>
-    <h1>COUNTER</h1>
-    <div id="container">
-        <button id="dec" onclick="dec()">-</button>
-        <div id="counter">0</div>
-        <button id="inc" onclick="inc()">+</button>
-    </div>
-</body>
 </html>
