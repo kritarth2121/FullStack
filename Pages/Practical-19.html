@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical-19</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+    min-width: 450px;
+}
+
+.container {
+    height: 560px;
+    width: 450px;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+#form1 {
+    position: absolute;
+    top: 100px;
+    left: 25px;
+}
+
+#form2 {
+    position: absolute;
+    top: 100px;
+    left: 525px;
+}
+
+#form3 {
+    position: absolute;
+    top: 100px;
+    left: -525px;
+}
+
+.form-container {
+    position: relative;
+}
+
+.form-container i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    visibility: hidden;
+}
+
+.form-container small {
+    position: absolute;
+    left: 5px;
+    top: 60px;
+    font-size: 16px;
+    margin-top: 5px;
+    visibility: hidden;
+}
+
+h1 {
+    color: gray;
+    font-size: 28px;
+    text-align: center;
+    margin: 15px auto 25px;
+}
+
+input {
+    display: block;
+    padding: 15px;
+    width: 400px;
+    margin: 28px 0px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-bottom: 1px lightslategrey solid;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+button {
+    text-align: center;
+    width: 150px;
+    height: 45px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background-color: crimson;
+    border-radius: 8px;
+    margin: 15px 20px;
+    color: white;
+    transition: .5s;
+}
+
+.step-row {
+    width: 100%;
+    height: 70px;
+    box-shadow: 0px -1px 5px -1px #777;
+    display: flex;
+    align-content: center;
+}
+
+.step-col {
+    width: 150px;
+    text-align: center;
+    font-size: 25px;
+    line-height: 70px;
+    z-index: 1;
+    font-weight: bolder;
+}
+
+#progress {
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    background-color: crimson;
+    transition: 1s;
+}
+
+#progress::after {
+    content: '';
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-top: 35px solid transparent;
+    border-bottom: 35px solid transparent;
+    border-left: 20px solid crimson;
+    top: 0px;
+    right: -20px;
+}
+
+button:hover {
+    background-color: rgba(170, 13, 13, 0.897);
+}
+
+.form-container.success input {
+    border-color: rgb(42, 207, 48);
+}
+
+.form-container.success .fa-check-circle {
+    visibility: visible;
+    color: rgb(42, 207, 48);
+}
+
+.form-container.error input {
+    border-color: red;
+}
+
+.form-container.error .fa-exclamation-circle {
+    visibility: visible;
+    color: red;
+}
+
+.form-container.error small {
+    visibility: visible;
+    color: red;
+}
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form1">
+            <h1>Create Account</h1>
+            <div class="form-container">
+                <input type="email" id="email" placeholder="Enter Email">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="form-container">
+                <input type="password" id="password1" placeholder="Enter Password">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="form-container">
+                <input type="password" id="password2" placeholder="Enter Password Again">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="btn-box">
+                <button type="button" id="next1">Next</button>
+            </div>
+        </form>
+        <form id="form2">
+            <h1>Social Links</h1>
+            <div class="form-container">
+                <input type="email" id="linkedin" placeholder="Enter LinkedIn Address">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="form-container">
+                <input type="email" id="github" placeholder="Enter Github Address">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="form-container">
+                <input type="email" id="facebook" placeholder="Enter facebook Address">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="btn-box">
+                <button type="button" id="back1">Back</button>
+                <button type="button" id="next2">Next</button>
+            </div>
+        </form>
+        <form id="form3">
+            <h1>Personal Information</h1>
+            <div class="form-container">
+                <input type="text" id="fname" placeholder="First Name">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="form-container">
+                <input type="text" id="lname" placeholder="Last Name">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="form-container">
+                <input type="tel" id="mobile" placeholder="Mobile Number">
+                <i class="fa fa-check-circle"></i>
+                <i class="fa fa-exclamation-circle"></i>
+                <small>Error Message</small>
+            </div>
+            <div class="btn-box">
+                <button type="button" id="back2">Back</button>
+                <button type="button" id="submit">Submit</button>
+            </div>
+        </form>
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col">Step-1</div>
+            <div class="step-col">Step-2</div>
+            <div class="step-col">Step-3</div>
+        </div>
+    </div>
+    <script >
+    //Selector
+const form1 = document.getElementById('form1');
+const form2 = document.getElementById('form2');
+const form3 = document.getElementById('form3');
+
+const next1 = document.getElementById('next1');
+const next2 = document.getElementById('next2');
+const back1 = document.getElementById('back1');
+const back2 = document.getElementById('back2');
+const submit = document.getElementById('submit');
+
+const progress = document.getElementById('progress');
+
+const email = document.getElementById('email');
+const password1 = document.getElementById('password1');
+const password2 = document.getElementById('password2');
+
+const linkedin = document.getElementById('linkedin');
+const github = document.getElementById('github');
+const facebook = document.getElementById('facebook');
+
+const fname = document.getElementById('fname');
+const lname = document.getElementById('lname');
+const mobile = document.getElementById('mobile');
+
+//Event Handler
+next1.onclick = function() {
+    if (isAccountValid(email, password1, password2)) {
+        form1.style.left = "525px";
+        form2.style.left = "25px";
+        progress.style.width = "300px";
+    }
+};
+
+next2.onclick = function() {
+    if (isAddressValid(linkedin, github, facebook)) {
+        form3.style.left = "25px";
+        form2.style.left = "-525px";
+        progress.style.width = "450px";
+    }
+};
+
+back1.onclick = function() {
+    form1.style.left = "25px";
+    form2.style.left = "525px";
+    progress.style.width = "150px";
+};
+
+back2.onclick = function() {
+    form2.style.left = "25px";
+    form3.style.left = "-525px";
+    progress.style.width = "300px";
+};
+
+submit.onclick = function(e) {
+    e.preventDefault();
+    isDataValid(fname, lname, mobile)
+};
+
+//Function
+function isAccountValid(email, password1, password2) {
+    const emailValue = email.value.trim();
+    const password1Value = password1.value.trim();
+    const password2Value = password2.value.trim();
+
+    let bool = true;
+
+    if (emailValue === "") {
+        showError(email, "Field can not be Blank");
+        bool = false;
+    } else if (!isEmailValid(emailValue)) {
+        showError(email, "Email Address is not valid");
+        bool = false;
+    } else {
+        showSuccess(email);
+    }
+
+    if (password1Value === "") {
+        showError(password1, "Field can not be Blank");
+        bool = false;
+    } else {
+        showSuccess(password1);
+    }
+
+    if (password2Value === "") {
+        showError(password2, "Field can not be Blank");
+        bool = false;
+    } else if (password1Value != password2Value) {
+        showError(password2, "Passwords do not match");
+    } else {
+        showSuccess(password2);
+    }
+
+    return bool;
+
+}
+
+function isAddressValid(linkedin, github, facebook) {
+    const linkedinValue = linkedin.value.trim();
+    const githubValue = github.value.trim();
+    const facebookValue = facebook.value.trim();
+
+    let bool = true;
+
+    if (linkedinValue === "") {
+        showError(linkedin, "Field can not be Blank");
+        bool = false;
+    } else if (!isEmailValid(linkedinValue)) {
+        showError(linkedin, "Email Address is not valid");
+        bool = false;
+    } else {
+        showSuccess(linkedin);
+    }
+
+    if (githubValue === "") {
+        showError(github, "Field can not be Blank");
+        bool = false;
+    } else if (!isEmailValid(githubValue)) {
+        showError(github, "Email Address is not valid");
+        bool = false;
+    } else {
+        showSuccess(github);
+    }
+
+    if (facebookValue === "") {
+        showError(facebook, "Field can not be Blank");
+        bool = false;
+    } else if (!isEmailValid(facebookValue)) {
+        showError(facebook, "Email Address is not valid");
+        bool = false;
+    } else {
+        showSuccess(facebook);
+    }
+
+    return bool;
+
+}
+
+function isDataValid(fname, lname, mobile) {
+    const fnameValue = fname.value.trim();
+    const lnameValue = lname.value.trim();
+    const mobileValue = mobile.value.trim();
+
+    let bool = true;
+
+    if (fnameValue === "") {
+        showError(fname, "Field can not be Blank");
+        bool = false;
+    } else {
+        showSuccess(fname);
+    }
+
+    if (lnameValue === "") {
+        showError(lname, "Field can not be Blank");
+        bool = false;
+    } else {
+        showSuccess(lname);
+    }
+
+    if (mobileValue === "") {
+        showError(mobile, "Field can not be Blank");
+        bool = false;
+    } else {
+        showSuccess(mobile);
+    }
+
+    return bool;
+}
+
+function showError(input, message) {
+    const formControl = input.parentNode;
+    formControl.className = "form-container error";
+    const small = formControl.querySelector("small")
+    small.innerHTML = message
+
+}
+
+function showSuccess(input) {
+    const formControl = input.parentNode;
+    formControl.className = "form-container success";
+}
+
+function isEmailValid(email) {
+    return /^([A-Za-z0-9\.\-\_]+)@([A-Za-z0-9]+)\.([A-Za-z]{2,3})$/.test(email);
+}</script>
+</body>
+
+</html>
